@@ -1,11 +1,11 @@
 <section>
-      <% facade.stations.each do |station| %>
+      <% facade.fuel_stations.each do |i| %>
         <h3 class="station"> <%= station.name %></h3>
           <ul>
-            <li> <%= station.address %></li>
-            <li> <%= station.fuel_types %></li>
-            <li> <%= station.distance %></li>
-            <li> <%= station.access_time %></li>
+            <li> <%= i.address %></li>
+            <li> <%= i.fuel_types %></li>
+            <li> <%= i.distance %></li>
+            <li> <%= i.access_time %></li>
           </ul>
 
         <% end %>

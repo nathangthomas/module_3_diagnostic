@@ -1,7 +1,7 @@
 class StationService
 
   def stations
-    get_json("https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?api_key=tSv9DiMHjCHNHEE7mkoqdopdKcHy6ihFlYwFTTxj&location=80302&fuel_type=all&distance=string&access_days_time=string")
+    get_json("/api/alt-fuel-stations/v1/nearest.json?api_key=tSv9DiMHjCHNHEE7mkoqdopdKcHy6ihFlYwFTTxj&location=80302&fuel_type=all&distance=string&access_days_time=string")
   end
 
   private
