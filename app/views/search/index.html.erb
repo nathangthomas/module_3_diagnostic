@@ -1,12 +1,13 @@
+<h1>Fuel Stations:</h1>
 <section>
-      <% facade.fuel_stations.each do |i| %>
-        <h3 class="station"> <%= station.name %></h3>
-          <ul>
-            <li> <%= i.address %></li>
-            <li> <%= i.fuel_types %></li>
-            <li> <%= i.distance %></li>
-            <li> <%= i.access_time %></li>
-          </ul>
+  <% facade.fuel_stations.each do |station| %>
+  <ul class="station">
+    <h3 class="name"><%= station.name %></h3>
+    <li class="address"> <%= station.address %></li>
+    <li class="fuel_types"> <%= station.fuel_types %></li>
+    <li class="distance"> <%= station.distance %></li>
+    <li class="access_time"> <%= station.access_time %></li>
+  </ul>
 
-        <% end %>
-      </section>
+  <% end %>
+</section>

@@ -1,7 +1,8 @@
 class StationFacade
 
   def fuel_stations
-    @_stations ||= stations.map { |station| Station.new(station)}
+    @_stations ||= stations[:fuel_stations].map { |station| Station.new(station)}
+  
   end
 
   private
