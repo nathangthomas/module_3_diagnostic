@@ -3,7 +3,7 @@ class Member
 
 
   def initialize(attrs = {})
-    @name = attrs[:station_name]
+    @name = attrs[:name]
     @id = attrs[:id]
   end
 end
