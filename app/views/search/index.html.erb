@@ -1,12 +1,9 @@
-<h1>Fuel Stations:</h1>
+<h1>7 Members:</h1>
 <section>
-  <% facade.fuel_stations.each do |station| %>
-  <ul class="station">
-    <h3 class="name"><%= station.name %></h3>
-    <li class="address"> <%= station.address %></li>
-    <li class="fuel_types"> <%= station.fuel_types %></li>
-    <li class="distance"> <%= station.distance %></li>
-    <li class="access_time"> <%= station.access_time %></li>
+  <% facade.members.each do |member| %>
+  <ul class="member">
+    <h3 class="name"><%= member.name %></h3>
+    <li class="id"> <%= member.id %></li>
   </ul>
 
   <% end %>
