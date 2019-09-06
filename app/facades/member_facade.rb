@@ -6,18 +6,12 @@ class MemberFacade
       faraday.adapter Faraday.default_adapter
     end
 
-      response = conn.get("http://westerosapi.herokuapp.com/api/v1/house/stark?")
-      response_data = JSON.parse(response.body, symbolize_names: true)
-      Member.new(response_data[:data][0][:attributes][:members])
-      binding.pry
+    response = conn.get("http://westerosapi.herokuapp.com/api/v1/house/stark?")
+    response_data = JSON.parse(response.body, symbolize_names: true)
+    members_array = (response_data[:data][0][:attributes][:members])
+
+    members_array.map do |member|
+      Member.new(member)
+    end
   end
-  #digging
 end
-
-#       binding.pry
-#     # Member.new(response_data)
-#   end
-# end
-
-
-#        get_json(/api/v1/house/stark?)
